@@ -627,12 +627,13 @@ footer {
   scroll-snap-align: end;
   margin: 0 !important; }
 
-#test section {
+section {
   height: 100vh;
   width: 100vw;
   scroll-snap-align: start;
   display: grid;
   place-items: center; }
+
 #test .animate {
   position: relative;
   margin-left: -150vw;

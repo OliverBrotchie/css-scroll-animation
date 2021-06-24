@@ -1,0 +1,55 @@
+@mixin recursiveChild($val,$steps)
+    >:nth-child(2)
+        --animate: none
+        &:hover
+            --animate: #{$val}
+        @if $steps > 1
+            @include recursiveChild($val , $steps - 1)
+    
+body
+    height: 100vh
+    overflow-y: scroll
+    scroll-snap-type: y mandatory
+
+nav
+    scroll-snap-align: start
+
+h1
+    color: white
+    font-size: 60px
+
+main
+    margin: 0 !important
+
+footer
+    scroll-snap-align: end
+    margin: 0 !important
+
+#test
+    section
+        height: 100vh
+        width: 100vw
+        scroll-snap-align: start
+        display: grid
+        place-items: center
+
+    .animate
+        position: relative
+        //width: 100vw
+        margin-left: -150vw
+        transition: all 0.5s ease-out
+        transform: var(--animate,none)
+
+    // Animate as it start in view
+    >:nth-child(1)
+        --animate: translateX(75vw)
+
+
+    @include recursiveChild(translateX(75vw), 5)
+    
+           
+@keyframes fadein 
+    0%
+        opacity: 0
+    100%
+        opacity: 1

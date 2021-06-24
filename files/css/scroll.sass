@@ -9,7 +9,7 @@
 body
     height: 100vh
     overflow-y: scroll
-    scroll-snap-type: y mandatory
+    //scroll-snap-type: y mandatory
 
 nav
     scroll-snap-align: start
@@ -36,12 +36,10 @@ section
 
     .animate
         position: relative
-        //width: 100vw
         margin-left: -150vw
         transition: all 0.5s ease-out
         transform: var(--animate,none)
 
-    // Animate as it start in view
     >:nth-child(1)
         --animate: translateX(75vw)
 

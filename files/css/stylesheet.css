@@ -610,8 +610,7 @@
 
 body {
   height: 100vh;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory; }
+  overflow-y: scroll; }
 
 nav {
   scroll-snap-align: start; }
